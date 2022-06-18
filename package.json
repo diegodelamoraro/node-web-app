@@ -1,0 +1,31 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "description": "Primera practica del Master Full Stack",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegodelamoraro/node-web-app.git"
+  },
+  "author": "Diego de la Mora Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegodelamoraro/node-web-app/issues"
+  },
+  "homepage": "https://github.com/diegodelamoraro/node-web-app#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "mongoose-paginate-v2": "^1.6.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.16",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0"
+  }
+}
