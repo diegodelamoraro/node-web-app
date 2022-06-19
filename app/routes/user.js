@@ -11,26 +11,31 @@ const router = express.Router();
 /**
  * Ruta: /user GET
  */
-router.get(`/`, controller.getUsers);
+router.get("/", controller.getUsers);
 
 /**
  * Ruta: /user GET
  */
-router.get(`/:id`, controller.getUser);
+router.get("/:id", controller.getUser);
 
 /**
- * Ruta: /user GET
+ * Ruta: /user GET By Type
  */
-router.post(`/`, controller.insertUser);
+router.get("/type/:type/department/:department", controller.getUsersBy);
 
 /**
- * Ruta: /user GET
+ * Ruta: /user POST
  */
-router.put(`/:id`, controller.updateUser);
+router.post("/", controller.insertUser);
 
 /**
- * Ruta: /user GET
+ * Ruta: /user PUT
  */
-router.delete(`/:id`, controller.deleteUser);
+router.put("/:id", controller.updateUser);
+
+/**
+ * Ruta: /user DELETE
+ */
+router.delete("/:department", controller.deleteUsers);
 
 module.exports = router;

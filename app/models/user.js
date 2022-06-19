@@ -18,6 +18,12 @@ const UserScheme = new mongoose.Schema(
       type: Date,
       required: true,
     },
+    type: {
+      type: String,
+    },
+    department: {
+      type: String,
+    },
   },
   {
     versionKey: false,
