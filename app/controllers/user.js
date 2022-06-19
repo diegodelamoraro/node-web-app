@@ -92,7 +92,7 @@ exports.insertUser = (req, res) => {
 };
 
 /**
- * Obtener DATA de USUARIOS
+ * DELETE DATA de USUARIOS
  * http://0.0.0.0:8080/user/soporte
  */
 exports.deleteUsers = (req, res) => {
