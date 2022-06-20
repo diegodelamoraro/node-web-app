@@ -1,7 +1,25 @@
 # node-web-app
-Bienvenido a mi primer repo de Git Hub 
+Bienvenido a mi primer repo de Git Hub
 
 Este es un proyecto en node.js en el cual se definieron una serie de APIs para consultar (GET), modificar (PUT) y/o eliminar (DELETE) registros de una base de datos de mongodb.
+
+El primer paso para ejecutar este proyecto es instalar Docker Desktop, una vez que lo tengo instalado puede iniciar un contenedor MongoDB usando Docker con el siguiente comando:
+ docker run --name mongodb -d mongo
+
+Para acceder localmente a la base de datos, es necesario exponer un puerto usando el argumento -p (puerto)
+docker run --name mongodb -d -p 27017:27017 mongo
+
+Dentro de la carpeta raiz del proyecto, se encuentra un archivo llamado "mydb.json" en donde se aloja la informacion guardada de la colleción de usuarios. Es necesario importarla para crear la coleccion dentro del docker de mongodb.
+
+Para realizar esto, es necesario montar un volumen para acceder a un archivo almacenado en su máquina local desde el interior del contenedor utilizando el siguiente comando:
+
+docker run -it -v $(pwd):/tmp mongo:5.0 mongoimport --drop --collection=users "mongodb+srv://user:password@clusterURL/database" /tmp/mydb.json
+
+o si mongodb no se encuentra dentro de un docker, solo es necesario el siguiente comando:
+
+mongoimport --db test --collection users --file mydb.json
+
+-------------------------------------------------
 
 A continuación se en listan las APIs desarrolladas.
 
@@ -36,3 +54,5 @@ Una vez que el contenedor esté listo y en funcionamiento, puede inspeccionar un
 
 Con el contenedor en ejecución, ahora, podrá consumir el API desde postman o cualquier cliente web.
 
+
+Por último, he agregado una carpeta de "evidencia" en donde se encuentran unas capturas de pantalla donde se puede visualizar que estoy utilizando Visual Studio Code, Docker Desktop y Mongo Compass
