@@ -34,5 +34,5 @@ docker run -p 8080:8080 -d {username}/node-web-app
 
 Una vez que el contenedor esté listo y en funcionamiento, puede inspeccionar una lista de sus contenedores en ejecución con docker ps
 
-Con el contenedor en ejecución, ahora, podrá obtener los datos de la tabla usuarios ingresando la dirección http://0.0.0.0:8080/user/ en su navegador.
+Con el contenedor en ejecución, ahora, podrá consumir el API desde postman o cualquier cliente web.
 
